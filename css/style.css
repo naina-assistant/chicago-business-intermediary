@@ -211,7 +211,7 @@ p:last-child {
 }
 
 .logo img {
-  height: 80px;
+  height: 120px;
   width: auto;
 }
 
@@ -1029,7 +1029,7 @@ p:last-child {
 }
 
 .footer-brand .logo img {
-  height: 64px;
+  height: 100px;
   filter: brightness(0) invert(1);
   margin-bottom: var(--space-lg);
 }
@@ -1591,11 +1591,11 @@ p:last-child {
   }
   
   .header-inner {
-    height: 70px;
+    height: 90px;
   }
   
   .logo img {
-    height: 60px;
+    height: 80px;
   }
   
   .nav-links {
