@@ -4,43 +4,200 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Business guides, frameworks, and resources for buying, selling, and transforming businesses. Expert insights from Chicago Business Intermediary.">
-  <meta name="keywords" content="business sale guide, M&A resources, due diligence checklist, business valuation methods, exit planning">
-  <meta name="author" content="Chicago Business Intermediary">
-  <meta name="robots" content="index, follow">
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="Resources & Guides | Chicago Business Intermediary">
-  <meta property="og:description" content="Tools, frameworks, and insights to help you navigate business transactions with confidence.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://naina-assistant.github.io/chicago-business-intermediary/resources.html">
-  <meta property="og:image" content="https://naina-assistant.github.io/chicago-business-intermediary/images/logo.png">
-  
   <title>Resources & Guides | Chicago Business Intermediary</title>
   
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-  
-  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo.png">
-  
-  <!-- Canonical -->
-  <link rel="canonical" href="https://naina-assistant.github.io/chicago-business-intermediary/resources.html">
+  <style>
+    .tool-card {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+      padding: var(--space-xl);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: var(--space-md);
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+    
+    .tool-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+    
+    .tool-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--navy);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .tool-icon svg {
+      width: 28px;
+      height: 28px;
+      color: white;
+    }
+    
+    .tool-content h4 {
+      margin-bottom: var(--space-xs);
+      color: var(--navy);
+    }
+    
+    .tool-content p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    
+    .tabs {
+      display: flex;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xl);
+      flex-wrap: wrap;
+    }
+    
+    .tab {
+      padding: var(--space-sm) var(--space-lg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: transparent;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all var(--transition);
+      font-size: 0.95rem;
+      font-family: var(--font-body);
+    }
+    
+    .tab:hover {
+      border-color: var(--navy);
+      color: var(--navy);
+    }
+    
+    .tab.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: white;
+    }
+    
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    .framework-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: var(--space-xl);
+      margin-bottom: var(--space-xl);
+    }
+    
+    .framework-card h3 {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+    
+    .framework-card h3 span {
+      background: var(--navy);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: var(--font-body);
+    }
+    
+    .framework-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+    }
+    
+    .framework-step {
+      background: var(--cream);
+      padding: var(--space-md);
+      border-radius: 6px;
+      border-left: 3px solid var(--gold);
+    }
+    
+    .framework-step h5 {
+      font-family: var(--font-body);
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+      color: var(--navy);
+    }
+    
+    .framework-step p {
+      font-size: 0.85rem;
+      margin: 0;
+    }
+    
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: var(--space-md) 0;
+    }
+    
+    .checklist li {
+      padding: var(--space-sm) 0;
+      padding-left: var(--space-xl);
+      position: relative;
+      border-bottom: 1px solid var(--border-light);
+    }
+    
+    .checklist li:last-child {
+      border-bottom: none;
+    }
+    
+    .checklist li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+      width: 12px;
+      height: 12px;
+      background: var(--gold);
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'/%3E%3C/svg%3E") center/contain no-repeat;
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'/%3E%3C/svg%3E") center/contain no-repeat;
+    }
+    
+    @media (max-width: 768px) {
+      .tool-card {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
   <header class="header" id="header">
     <div class="container">
       <div class="header-inner">
-        <a href="index.html" class="logo" aria-label="Chicago Business Intermediary Home">
-          <img src="images/logo.png" alt="Chicago Business Intermediary" width="200" height="56">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="Chicago Business Intermediary">
         </a>
-        <nav class="nav" role="navigation" aria-label="Main navigation">
+        <nav class="nav">
           <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
             <li><a href="sell.html">Sell</a></li>
             <li><a href="buy.html">Buy</a></li>
             <li><a href="advisory.html">Advisory</a></li>
@@ -48,16 +205,15 @@
             <li><a href="resources.html" class="active">Resources</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
-          <a href="contact.html" class="btn btn-primary btn-sm">Start a Conversation</a>
-          <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+          <a href="contact.html" class="btn btn-primary btn-sm">Get Started</a>
+          <div class="mobile-toggle" onclick="toggleMenu()">
             <span></span><span></span><span></span>
-          </button>
+          </div>
         </nav>
       </div>
     </div>
   </header>
 
-  <!-- Page Header -->
   <section class="page-header">
     <div class="container">
       <h1>Resources & Guides</h1>
@@ -66,42 +222,36 @@
   </section>
 
   <!-- Interactive Tools -->
-  <section class="section section-white">
+  <section class="section">
     <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-eyebrow">Tools</span>
-        <h2>Interactive Tools</h2>
-        <p>Calculate, analyze, and prepare with our specialized tools.</p>
+      <div class="section-header">
+        <span class="section-label">Interactive Tools</span>
+        <h2>Calculate, analyze, and prepare</h2>
       </div>
       
-      <div class="tools-section fade-in">
-        <a href="valuation-calculator.html" style="text-decoration: none; display: block;">
-          <div class="tool-card">
-            <div class="tool-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <div class="tool-content">
-              <h4>Business Valuation Calculator</h4>
-              <p>Get an instant estimate of your business value using SDE and revenue multiples, adjusted for industry and business characteristics.</p>
-            </div>
-          </div>
-        </a>
-      </div>
+      <a href="valuation-calculator.html" class="tool-card">
+        <div class="tool-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <div class="tool-content">
+          <h4>Business Valuation Calculator</h4>
+          <p>Get an instant estimate of your business value using SDE and revenue multiples, adjusted for industry and business characteristics.</p>
+        </div>
+      </a>
     </div>
   </section>
 
   <!-- Guides by Category -->
   <section class="section section-cream" id="guides">
     <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-eyebrow">Frameworks</span>
-        <h2>Guides & Frameworks</h2>
-        <p>In-depth resources organized by your goals.</p>
+      <div class="section-header">
+        <span class="section-label">Guides & Frameworks</span>
+        <h2>In-depth resources for your journey</h2>
       </div>
       
-      <div class="tabs fade-in">
+      <div class="tabs">
         <button class="tab active" data-tab="selling">Selling a Business</button>
         <button class="tab" data-tab="buying">Buying a Business</button>
         <button class="tab" data-tab="valuation">Valuation Methods</button>
@@ -110,7 +260,7 @@
       
       <!-- Selling Tab -->
       <div id="selling" class="tab-content active">
-        <div class="framework-card fade-in">
+        <div class="framework-card">
           <h3><span>1</span> Exit Readiness Framework</h3>
           <p>Before listing your business, ensure you're prepared for a successful sale. This framework helps you assess and improve your exit readiness.</p>
           
@@ -134,7 +284,7 @@
           </div>
         </div>
         
-        <div class="framework-card fade-in">
+        <div class="framework-card">
           <h3><span>2</span> Seller's Timeline Checklist</h3>
           <p>A typical business sale takes 6-12 months. Here's what to expect at each stage.</p>
           
@@ -148,7 +298,7 @@
           </ul>
         </div>
         
-        <div class="framework-card fade-in">
+        <div class="framework-card">
           <h3><span>3</span> Maximizing Business Value</h3>
           <p>Key levers to increase your business's sale price before going to market.</p>
           
@@ -159,7 +309,7 @@
             </div>
             <div class="framework-step">
               <h5>Customer Diversification</h5>
-              <p>No single customer greater than 15% of revenue reduces buyer risk</p>
+              <p>No single customer >15% of revenue reduces buyer risk</p>
             </div>
             <div class="framework-step">
               <h5>Management Team</h5>
@@ -175,7 +325,7 @@
       
       <!-- Buying Tab -->
       <div id="buying" class="tab-content">
-        <div class="framework-card fade-in">
+        <div class="framework-card">
           <h3><span>1</span> Acquisition Search Framework</h3>
           <p>A structured approach to finding the right business to buy.</p>
           
@@ -199,7 +349,7 @@
           </div>
         </div>
         
-        <div class="framework-card fade-in">
+        <div class="framework-card">
           <h3><span>2</span> Due Diligence Checklist</h3>
           <p>Critical areas to investigate before closing on any acquisition.</p>
           
@@ -213,7 +363,7 @@
           </ul>
         </div>
         
-        <div class="framework-card fade-in">
+        <div class="framework-card">
           <h3><span>3</span> Deal Structure Options</h3>
           <p>Common ways to structure a business acquisition.</p>
           
@@ -240,7 +390,7 @@
       
       <!-- Valuation Tab -->
       <div id="valuation" class="tab-content">
-        <div class="framework-card fade-in">
+        <div class="framework-card">
           <h3><span>1</span> Common Valuation Methods</h3>
           <p>The three primary approaches used to value small and mid-size businesses.</p>
           
@@ -264,7 +414,7 @@
           </div>
         </div>
         
-        <div class="framework-card fade-in">
+        <div class="framework-card">
           <h3><span>2</span> Understanding SDE vs EBITDA</h3>
           <p>Two key earnings metrics used in business valuation.</p>
           
@@ -277,7 +427,7 @@
           </ul>
         </div>
         
-        <div class="framework-card fade-in">
+        <div class="framework-card">
           <h3><span>3</span> Multiple Drivers</h3>
           <p>Factors that push valuation multiples higher or lower.</p>
           
@@ -296,31 +446,31 @@
       
       <!-- Transformation Tab -->
       <div id="transformation" class="tab-content">
-        <div class="framework-card fade-in">
-          <h3><span>1</span> Operational Assessment Framework</h3>
-          <p>Evaluate where improvements can create the most value in your business.</p>
+        <div class="framework-card">
+          <h3><span>1</span> Technology Readiness Assessment</h3>
+          <p>Evaluate where technology can create the most value in your business.</p>
           
           <div class="framework-steps">
             <div class="framework-step">
-              <h5>Customer Operations</h5>
-              <p>Sales process, service delivery, customer success, retention programs</p>
+              <h5>Customer Service</h5>
+              <p>Chatbots, email automation, ticket routing, FAQ handling</p>
             </div>
             <div class="framework-step">
-              <h5>Internal Operations</h5>
-              <p>Workflow efficiency, scheduling, quality control, inventory management</p>
+              <h5>Operations</h5>
+              <p>Inventory forecasting, scheduling, quality control, predictive maintenance</p>
             </div>
             <div class="framework-step">
-              <h5>Financial Operations</h5>
-              <p>Invoicing, collections, reporting, budgeting, cash flow management</p>
+              <h5>Sales & Marketing</h5>
+              <p>Lead scoring, content generation, personalization, campaign optimization</p>
             </div>
             <div class="framework-step">
-              <h5>People Operations</h5>
-              <p>Hiring, training, performance management, compensation, culture</p>
+              <h5>Back Office</h5>
+              <p>Invoice processing, data entry, reporting, document management</p>
             </div>
           </div>
         </div>
         
-        <div class="framework-card fade-in">
+        <div class="framework-card">
           <h3><span>2</span> Process Improvement Methodology</h3>
           <p>A simplified Lean approach for small business operations.</p>
           
@@ -333,7 +483,7 @@
           </ul>
         </div>
         
-        <div class="framework-card fade-in">
+        <div class="framework-card">
           <h3><span>3</span> Cost Reduction Framework</h3>
           <p>Systematic approach to finding sustainable cost savings.</p>
           
@@ -361,20 +511,18 @@
   </section>
 
   <!-- CTA -->
-  <section class="section section-cta">
+  <section class="section">
     <div class="container">
-      <div class="cta fade-in">
-        <h2>Need personalized guidance?</h2>
+      <div class="cta">
+        <h2>Need Personalized Guidance?</h2>
         <p>These resources provide a starting point. For advice tailored to your specific situation, let's talk.</p>
         <div class="cta-buttons">
-          <a href="contact.html" class="btn btn-gold btn-lg">Schedule a Consultation</a>
-          <a href="valuation-calculator.html" class="btn btn-white btn-lg">Try Our Calculator</a>
+          <a href="contact.html" class="btn btn-primary btn-lg">Schedule a Consultation</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -384,24 +532,22 @@
           </a>
           <p>Expert guidance for buying, selling, and transforming businesses in Chicago and beyond.</p>
         </div>
-        <div class="footer-links-col">
+        <div>
           <h4>Services</h4>
           <ul class="footer-links">
             <li><a href="sell.html">Sell Your Business</a></li>
             <li><a href="buy.html">Buy a Business</a></li>
             <li><a href="advisory.html">Advisory Services</a></li>
-            <li><a href="valuation-calculator.html">Valuation Calculator</a></li>
           </ul>
         </div>
-        <div class="footer-links-col">
+        <div>
           <h4>Resources</h4>
           <ul class="footer-links">
+            <li><a href="valuation-calculator.html">Valuation Calculator</a></li>
             <li><a href="resources.html">Guides & Frameworks</a></li>
-            <li><a href="resources.html#selling">Selling a Business</a></li>
-            <li><a href="resources.html#buying">Buying a Business</a></li>
           </ul>
         </div>
-        <div class="footer-links-col">
+        <div>
           <h4>Contact</h4>
           <ul class="footer-links">
             <li>Chicago, Illinois</li>
@@ -411,7 +557,7 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2025 Chicago Business Intermediary. All rights reserved.</p>
-        <p>Serving Chicago and the greater Midwest</p>
+        <p>Chicago, Illinois</p>
       </div>
     </div>
   </footer>
@@ -420,20 +566,10 @@
     function toggleMenu() {
       document.querySelector('.nav-links').classList.toggle('active');
     }
-
+    
     const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 50); });
+    
     // Tab switching
     document.querySelectorAll('.tab').forEach(tab => {
       tab.addEventListener('click', function() {
@@ -444,18 +580,6 @@
         document.getElementById(this.dataset.tab).classList.add('active');
       });
     });
-    
-    // Handle hash links
-    if (window.location.hash) {
-      const tabId = window.location.hash.substring(1);
-      const tab = document.querySelector(`[data-tab="${tabId}"]`);
-      if (tab) {
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-        tab.classList.add('active');
-        document.getElementById(tabId).classList.add('active');
-      }
-    }
   </script>
 </body>
 </html>
